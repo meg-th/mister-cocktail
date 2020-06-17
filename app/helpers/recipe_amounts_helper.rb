@@ -1,0 +1,2 @@
+module RecipeAmountsHelper
+end
