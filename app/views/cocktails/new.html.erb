@@ -1,15 +1,9 @@
 <h1>Add your new cocktail recipe:</h1>
-
-<%= form_with model: @cocktail  do |f| %>
-	<div class="form-group">
-	  <%= f.label :name %>:
-	  <%= f.text_field :name %><br />
-	</div>
-	<div class="form-group">
-		<%= f.label :description %>:
-		<%= f.text_field :description %><br />	
-	</div>
-  <%= f.submit %>
+ <%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
 <% end %>
+
 <%= link_to "Home", cocktails_path %>
  
