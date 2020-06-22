@@ -1,7 +1,7 @@
 class RecipeAmountsController < ApplicationController
   def new
     @cocktail = Cocktail.find(params[:cocktail_id])
-    @dose = Dose.new
+    @recipe_amount = RecipeAmount.new
   end
 
   def create
@@ -18,6 +18,6 @@ class RecipeAmountsController < ApplicationController
   private
 
   def recipe_amount_params
-    params.require(:recipe_amount).permit(:description, :ingredient_id)
+    params.require(:recipe_amount).permit(:amount, :description, :ingredient_id)
   end
 end

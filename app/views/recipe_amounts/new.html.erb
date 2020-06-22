@@ -1,2 +1,20 @@
-<h1>RecipeAmounts#new</h1>
-<p>Find me in app/views/recipe_amounts/new.html.erb</p>
+<h1>Cocktail Recipe:</h1>
+<%= form_with(model: [@cocktail, @recipe_amount])  do |f| %>
+	<div class="form-group">
+	  <%= f.label :amount%>:
+	  <%= f.text_field :amount %><br />
+	</div>
+
+	<div class="form-group">
+	  <%= f.label :description%>:
+	  <%= f.text_field :description %><br />
+	</div>
+
+	<div class="form-group">
+		<%= f.label :ingredient_id %>:
+		<%= f.text_field :ingredient_id%><br />	
+	</div>
+  <%= f.submit %>
+<% end %>
+<%= link_to "Home", cocktails_path %>
+ 
