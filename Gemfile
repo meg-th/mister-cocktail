@@ -50,5 +50,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#Simple Form
+# Simple Form
 gem 'simple_form'
+
+# Image Hosting
+gem 'cloudinary'
+
+# Safe Storage 
+gem 'dotenv-rails', groups: [:development, :test]
