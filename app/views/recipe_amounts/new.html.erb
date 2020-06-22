@@ -1,20 +1,10 @@
-<h1>Cocktail Recipe:</h1>
-<%= form_with(model: [@cocktail, @recipe_amount])  do |f| %>
-	<div class="form-group">
-	  <%= f.label :amount%>:
-	  <%= f.text_field :amount %><br />
-	</div>
+<h1><%= @cocktail.name%> Recipe</h1>
 
-	<div class="form-group">
-	  <%= f.label :description%>:
-	  <%= f.text_field :description %><br />
-	</div>
-
-	<div class="form-group">
-		<%= f.label :ingredient_id %>:
-		<%= f.text_field :ingredient_id%><br />	
-	</div>
-  <%= f.submit %>
-<% end %>
 <%= link_to "Home", cocktails_path %>
  
+<%= simple_form_for [ @cocktail, @recipe_amount ] do |f| %>
+    <%= f.input :amount%>
+    <%= f.input :description%>
+    <%= f.association :ingredient %>
+    <div class="btn btn-primary"> <%= f.button :submit %> </div>
+  <% end %>

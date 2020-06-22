@@ -7,7 +7,7 @@
 <div class="cocktails">
   <% @cocktails.each do |cocktail| %>
     <ul>
-      <li><%=link_to cocktail.name, cocktail_path(@cocktails)%> - <%= cocktail.description.capitalize %>
+      <li><%=link_to cocktail.name, cocktail_path(cocktail)%> - <%= cocktail.description.capitalize %>
          <%= link_to cocktail_path(cocktail), data: { confirm: "Are you sure? Someone might like that cocktail..." }, method: :delete do %> 
          <p>BIN IT</p>
          <% end %>

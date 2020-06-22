@@ -2,6 +2,7 @@ class RecipeAmountsController < ApplicationController
   def new
     @cocktail = Cocktail.find(params[:cocktail_id])
     @recipe_amount = RecipeAmount.new
+    
   end
 
   def create

@@ -1,9 +1,5 @@
 class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
-  
-  def home
-    redirect_to cocktails_path
-  end 
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
@@ -23,7 +19,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    set_cocktail
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def destroy
