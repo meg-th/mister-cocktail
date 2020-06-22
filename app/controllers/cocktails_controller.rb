@@ -1,5 +1,10 @@
 class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
+  
+  def home
+    redirect_to cocktails_path
+  end 
+
   def create
     @cocktail = Cocktail.new(cocktail_params)
       if @cocktail.save!
