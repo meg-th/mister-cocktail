@@ -1,11 +1,13 @@
 <h1>Add your new cocktail recipe:</h1>
  <%= simple_form_for @cocktail do |f| %>
+
   <%= f.input :name, label: "Name: "%>
+
   <%= f.input :description, label: "Description: " %>
-  <%= f.label "Show us what it looks like:" %>
+
   <%= f.input :photo, as: :file %>
   <%= f.button :submit %>
 <% end %>
 
-<%= link_to "Home", cocktails_path %>
+<button><%= link_to "Home", cocktails_path %></button>
  

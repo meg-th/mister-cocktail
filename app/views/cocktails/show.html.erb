@@ -1,9 +1,10 @@
 <h1><%= @cocktail.name %></h1>
 <h2><%= @cocktail.description %></h2>
+ <%= cl_image_tag @cocktail.photo.key %>
 <% @cocktail.recipe_amounts.each do |recipe_amount| %>
   <ul>
     <li><%= recipe_amount.amount %><%= recipe_amount.description %><%= recipe_amount.ingredient.name%></li>
   </ul>
 <% end  %>
-<%= link_to "Add ingredients", new_cocktail_recipe_amount_path(@cocktail) %>
-<%= link_to "Home", cocktails_path %>
+<button><%= link_to "Add ingredients", new_cocktail_recipe_amount_path(@cocktail) %></button>
+<button><%= link_to "Home", cocktails_path %></button>
