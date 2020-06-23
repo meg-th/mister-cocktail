@@ -1,6 +1,6 @@
 <% @cocktails.each do |cocktail| %>
   <div class="card">
-    <%= cl_image_tag cocktail.photo.key, :width=>500, :height=>300, :crop=>"scale"%>
+    <%= cl_image_tag cocktail.photo.key, :width=>500, :height=>300, :crop=>"fill"%>
   </div>
     <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
     <%= link_to cocktail_path(cocktail), data: { confirm: "Are you sure? Someone might like that cocktail..." }, method: :delete do %>
