@@ -2,18 +2,8 @@
   <h1>Mister Cocktail</h1>
   <h2>The Open Source Cocktail Recipe Collection</h2>
 </div>
-<button><%= link_to "Add your own recipe", new_cocktail_path  %></button>
+<button class="cocktail-btn"><%= link_to "Add your own recipe", new_cocktail_path  %></button>
 
 <div class="cocktails">
-  <% @cocktails.each do |cocktail| %>
-    <ul>
-    <li><%= cl_image_tag cocktail.photo.key %></li>
-
-      <li><p><%=link_to cocktail.name, cocktail_path(cocktail)%> - <%= cocktail.description.capitalize %>
-         <%= link_to cocktail_path(cocktail), data: { confirm: "Are you sure? Someone might like that cocktail..." }, method: :delete do %></p> 
-         <p>BIN IT</p>
-         <% end %>
-      </li>
-    </ul>
-  <% end %>
+ <%= render 'shared/cocktails_card' %>
 </div>
