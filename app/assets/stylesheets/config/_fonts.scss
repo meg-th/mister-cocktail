@@ -1,0 +1,20 @@
+// Imported Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+// Define fonts for body text
+
+h1 {
+  font-family: 'Alegreya', serif;
+  font-weight:900;
+  font-size: 60px;
+}
+
+h2, h3 {
+  font-family: 'Alegreya', serif;
+  font-weight:500;
+  }
+
+p {
+  font-family: 'Lora', serif;
+}
