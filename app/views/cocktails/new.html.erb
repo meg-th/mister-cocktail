@@ -2,6 +2,8 @@
  <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name, label: "Name: "%>
   <%= f.input :description, label: "Description: " %>
+  <%= f.label "Show us what it looks like:" %>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit %>
 <% end %>
 
