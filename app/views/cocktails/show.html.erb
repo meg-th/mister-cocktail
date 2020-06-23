@@ -6,5 +6,5 @@
     <li><%= recipe_amount.amount %><%= recipe_amount.description %><%= recipe_amount.ingredient.name%></li>
   </ul>
 <% end  %>
-<%= link_to "Add ingredients", new_cocktail_recipe_amount_path(@cocktail) %>
-<%= link_to "Home", cocktails_path %>
+<button><%= link_to "Add ingredients", new_cocktail_recipe_amount_path(@cocktail) %></button>
+<button><%= link_to "Home", cocktails_path %></button>
