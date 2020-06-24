@@ -1,9 +1,15 @@
-<div>
-  <h1>Mister Cocktail</h1>
-  <h2>The Open Source Cocktail Recipe Collection</h2>
+<div class="split left">
+  <div class="centered">
+    <h1>Mister Cocktail</h1>
+    <h2>The Open Source Cocktail Recipe Collection</h2>
+	<a class="cocktail-btn"><%= link_to "Add your own recipe", new_cocktail_path  %></a>
+  </div>
 </div>
-<button class="cocktail-btn"><%= link_to "Add your own recipe", new_cocktail_path  %></button>
 
-<div class="cocktails">
- <%= render 'shared/cocktails_card' %>
+<div class="split right">
+  <div class="centered">
+    <div class="cocktails">
+      <%= render 'shared/cocktails_card' %>
+    </div>
+  </div>
 </div>
